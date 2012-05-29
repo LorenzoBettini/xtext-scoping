@@ -49,11 +49,13 @@ class HelloScopingParserTest {
 	@Test
 	def void testInheritedField() {
 		'''
-			Hello foo {
+			Hello base {
 				field foo
 			}
-			Hello bar extends foo {
+			Hello derived extends base {
+				field bar
 				ref foo
+				ref bar
 			}
 		'''.parseAndAsserNoError
 	}

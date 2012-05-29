@@ -82,17 +82,23 @@ public class HelloScopingParserTest {
   @Test
   public void testInheritedField() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("Hello foo {");
+    _builder.append("Hello base {");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("field foo");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
-    _builder.append("Hello bar extends foo {");
+    _builder.append("Hello derived extends base {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("field bar");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("ref foo");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("ref bar");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
