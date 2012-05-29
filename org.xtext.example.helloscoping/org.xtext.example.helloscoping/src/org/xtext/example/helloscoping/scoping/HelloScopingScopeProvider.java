@@ -3,7 +3,13 @@
  */
 package org.xtext.example.helloscoping.scoping;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import org.xtext.example.helloscoping.helloScoping.FieldReference;
+import org.xtext.example.helloscoping.helloScoping.Greeting;
 
 /**
  * This class contains custom scoping description.
@@ -13,5 +19,24 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
  *
  */
 public class HelloScopingScopeProvider extends AbstractDeclarativeScopeProvider {
+
+	@Override
+	public IScope getScope(EObject context, EReference reference) {
+		if (context instanceof FieldReference) {
+			FieldReference fieldReference = (FieldReference) context;
+			Greeting greeting = (Greeting) fieldReference.eContainer();
+			return getFields(greeting);
+		}
+
+		return super.getScope(context, reference);
+	}
+
+	private IScope getFields(Greeting greeting) {
+		IScope parentScope = IScope.NULLSCOPE;
+		if (greeting.getSuperType() != null) {
+			parentScope = getFields(greeting.getSuperType());
+		}
+		return Scopes.scopeFor(greeting.getFields(), parentScope);
+	}
 
 }

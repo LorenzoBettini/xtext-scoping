@@ -46,6 +46,18 @@ class HelloScopingParserTest {
 		'''.parseAndAsserNoError
 	}
 	
+	@Test
+	def void testInheritedField() {
+		'''
+			Hello foo {
+				field foo
+			}
+			Hello bar extends foo {
+				ref foo
+			}
+		'''.parseAndAsserNoError
+	}
+	
 	def void parseAndAsserNoError(CharSequence seq) {
 		val model = seq.parse
 		model.assertNotNull

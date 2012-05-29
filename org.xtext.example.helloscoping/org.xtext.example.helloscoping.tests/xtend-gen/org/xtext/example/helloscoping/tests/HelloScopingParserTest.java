@@ -75,6 +75,26 @@ public class HelloScopingParserTest {
     this.parseAndAsserNoError(_builder);
   }
   
+  @Test
+  public void testInheritedField() {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("Hello foo {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("field foo");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("Hello bar extends foo {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("ref foo");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    this.parseAndAsserNoError(_builder);
+  }
+  
   public void parseAndAsserNoError(final CharSequence seq) {
     try {
       final Model model = this._parseHelper.parse(seq);
