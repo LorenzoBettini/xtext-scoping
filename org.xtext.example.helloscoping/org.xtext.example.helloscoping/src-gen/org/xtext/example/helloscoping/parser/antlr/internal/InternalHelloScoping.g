@@ -177,9 +177,27 @@ ruleGreeting returns [EObject current=null]
 	    }
 
 )
-)*	otherlv_6='}' 
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getGreetingAccess().getReferencesFieldReferenceParserRuleCall_5_0()); 
+	    }
+		lv_references_6_0=ruleFieldReference		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getGreetingRule());
+	        }
+       		add(
+       			$current, 
+       			"references",
+        		lv_references_6_0, 
+        		"FieldReference");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*	otherlv_7='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_5());
+    	newLeafNode(otherlv_7, grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_6());
     }
 )
 ;
@@ -222,6 +240,44 @@ ruleField returns [EObject current=null]
         		lv_name_1_0, 
         		"ID");
 	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleFieldReference
+entryRuleFieldReference returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getFieldReferenceRule()); }
+	 iv_ruleFieldReference=ruleFieldReference 
+	 { $current=$iv_ruleFieldReference.current; } 
+	 EOF 
+;
+
+// Rule FieldReference
+ruleFieldReference returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='ref' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getFieldReferenceAccess().getRefKeyword_0());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getFieldReferenceRule());
+	        }
+        }
+	otherlv_1=RULE_ID
+	{
+		newLeafNode(otherlv_1, grammarAccess.getFieldReferenceAccess().getReferenceFieldCrossReference_1_0()); 
+	}
 
 )
 ))

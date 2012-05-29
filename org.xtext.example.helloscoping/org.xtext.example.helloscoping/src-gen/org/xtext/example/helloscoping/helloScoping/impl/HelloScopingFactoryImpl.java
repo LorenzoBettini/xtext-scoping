@@ -71,6 +71,7 @@ public class HelloScopingFactoryImpl extends EFactoryImpl implements HelloScopin
       case HelloScopingPackage.MODEL: return createModel();
       case HelloScopingPackage.GREETING: return createGreeting();
       case HelloScopingPackage.FIELD: return createField();
+      case HelloScopingPackage.FIELD_REFERENCE: return createFieldReference();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -107,6 +108,17 @@ public class HelloScopingFactoryImpl extends EFactoryImpl implements HelloScopin
   {
     FieldImpl field = new FieldImpl();
     return field;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FieldReference createFieldReference()
+  {
+    FieldReferenceImpl fieldReference = new FieldReferenceImpl();
+    return fieldReference;
   }
 
   /**

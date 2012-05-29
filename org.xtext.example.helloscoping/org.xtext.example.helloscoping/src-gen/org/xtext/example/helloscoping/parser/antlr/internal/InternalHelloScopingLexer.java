@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class InternalHelloScopingLexer extends Lexer {
     public static final int RULE_ID=4;
     public static final int RULE_STRING=6;
+    public static final int T__16=16;
     public static final int T__15=15;
     public static final int T__12=12;
     public static final int T__11=11;
@@ -142,15 +143,36 @@ public class InternalHelloScopingLexer extends Lexer {
     }
     // $ANTLR end "T__15"
 
+    // $ANTLR start "T__16"
+    public final void mT__16() throws RecognitionException {
+        try {
+            int _type = T__16;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:16:7: ( 'ref' )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:16:9: 'ref'
+            {
+            match("ref"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__16"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:234:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:234:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:290:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:290:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:234:11: ( '^' )?
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:290:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -159,7 +181,7 @@ public class InternalHelloScopingLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:234:11: '^'
+                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:290:11: '^'
                     {
                     match('^'); 
 
@@ -177,7 +199,7 @@ public class InternalHelloScopingLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:234:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:290:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -226,10 +248,10 @@ public class InternalHelloScopingLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:236:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:236:12: ( '0' .. '9' )+
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:292:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:292:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:236:12: ( '0' .. '9' )+
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:292:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -243,7 +265,7 @@ public class InternalHelloScopingLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:236:13: '0' .. '9'
+            	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:292:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -275,10 +297,10 @@ public class InternalHelloScopingLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -296,10 +318,10 @@ public class InternalHelloScopingLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -315,7 +337,7 @@ public class InternalHelloScopingLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -331,7 +353,7 @@ public class InternalHelloScopingLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -356,10 +378,10 @@ public class InternalHelloScopingLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -375,7 +397,7 @@ public class InternalHelloScopingLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -391,7 +413,7 @@ public class InternalHelloScopingLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:238:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:294:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -434,12 +456,12 @@ public class InternalHelloScopingLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:240:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:240:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:296:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:296:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:240:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:296:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -464,7 +486,7 @@ public class InternalHelloScopingLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:240:52: .
+            	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:296:52: .
             	    {
             	    matchAny(); 
 
@@ -494,12 +516,12 @@ public class InternalHelloScopingLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:242:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:242:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:298:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:298:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:242:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:298:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -512,7 +534,7 @@ public class InternalHelloScopingLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:242:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:298:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -532,7 +554,7 @@ public class InternalHelloScopingLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:242:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:298:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -541,9 +563,9 @@ public class InternalHelloScopingLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:242:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:298:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:242:41: ( '\\r' )?
+                    // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:298:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -552,7 +574,7 @@ public class InternalHelloScopingLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:242:41: '\\r'
+                            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:298:41: '\\r'
                             {
                             match('\r'); 
 
@@ -584,10 +606,10 @@ public class InternalHelloScopingLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:244:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:244:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:300:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:300:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:244:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:300:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -641,8 +663,8 @@ public class InternalHelloScopingLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:246:16: ( . )
-            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:246:18: .
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:302:16: ( . )
+            // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:302:18: .
             {
             matchAny(); 
 
@@ -657,8 +679,8 @@ public class InternalHelloScopingLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=12;
+        // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=13;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -697,49 +719,56 @@ public class InternalHelloScopingLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:40: RULE_ID
+                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:40: T__16
+                {
+                mT__16(); 
+
+                }
+                break;
+            case 7 :
+                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:46: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 7 :
-                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:48: RULE_INT
+            case 8 :
+                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:54: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 8 :
-                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:57: RULE_STRING
+            case 9 :
+                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:63: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 9 :
-                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:69: RULE_ML_COMMENT
+            case 10 :
+                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:75: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 10 :
-                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:85: RULE_SL_COMMENT
+            case 11 :
+                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:91: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 11 :
-                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:101: RULE_WS
+            case 12 :
+                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:107: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 12 :
-                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:109: RULE_ANY_OTHER
+            case 13 :
+                // ../org.xtext.example.helloscoping/src-gen/org/xtext/example/helloscoping/parser/antlr/internal/InternalHelloScoping.g:1:115: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -753,67 +782,72 @@ public class InternalHelloScopingLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\2\17\2\uffff\1\17\1\15\2\uffff\3\15\2\uffff\1\17\1\uffff"+
-        "\1\17\2\uffff\1\17\5\uffff\6\17\1\42\1\17\1\44\1\uffff\1\17\1\uffff"+
-        "\1\46\1\uffff";
+        "\1\uffff\2\20\2\uffff\2\20\1\16\2\uffff\3\16\2\uffff\1\20\1\uffff"+
+        "\1\20\2\uffff\2\20\5\uffff\3\20\1\42\3\20\1\uffff\1\46\1\20\1\50"+
+        "\1\uffff\1\20\1\uffff\1\52\1\uffff";
     static final String DFA12_eofS =
-        "\47\uffff";
+        "\53\uffff";
     static final String DFA12_minS =
-        "\1\0\1\145\1\170\2\uffff\1\151\1\101\2\uffff\2\0\1\52\2\uffff\1"+
-        "\154\1\uffff\1\164\2\uffff\1\145\5\uffff\1\154\1\145\1\154\1\157"+
-        "\1\156\1\144\1\60\1\144\1\60\1\uffff\1\163\1\uffff\1\60\1\uffff";
+        "\1\0\1\145\1\170\2\uffff\1\151\1\145\1\101\2\uffff\2\0\1\52\2\uffff"+
+        "\1\154\1\uffff\1\164\2\uffff\1\145\1\146\5\uffff\1\154\1\145\1\154"+
+        "\1\60\1\157\1\156\1\144\1\uffff\1\60\1\144\1\60\1\uffff\1\163\1"+
+        "\uffff\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\145\1\170\2\uffff\1\151\1\172\2\uffff\2\uffff\1\57\2"+
-        "\uffff\1\154\1\uffff\1\164\2\uffff\1\145\5\uffff\1\154\1\145\1\154"+
-        "\1\157\1\156\1\144\1\172\1\144\1\172\1\uffff\1\163\1\uffff\1\172"+
-        "\1\uffff";
+        "\1\uffff\1\145\1\170\2\uffff\1\151\1\145\1\172\2\uffff\2\uffff"+
+        "\1\57\2\uffff\1\154\1\uffff\1\164\2\uffff\1\145\1\146\5\uffff\1"+
+        "\154\1\145\1\154\1\172\1\157\1\156\1\144\1\uffff\1\172\1\144\1\172"+
+        "\1\uffff\1\163\1\uffff\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\3\uffff\1\3\1\4\2\uffff\1\6\1\7\3\uffff\1\13\1\14\1\uffff\1\6"+
-        "\1\uffff\1\3\1\4\1\uffff\1\7\1\10\1\11\1\12\1\13\11\uffff\1\1\1"+
-        "\uffff\1\5\1\uffff\1\2";
+        "\3\uffff\1\3\1\4\3\uffff\1\7\1\10\3\uffff\1\14\1\15\1\uffff\1\7"+
+        "\1\uffff\1\3\1\4\2\uffff\1\10\1\11\1\12\1\13\1\14\7\uffff\1\6\3"+
+        "\uffff\1\1\1\uffff\1\5\1\uffff\1\2";
     static final String DFA12_specialS =
-        "\1\0\10\uffff\1\1\1\2\34\uffff}>";
+        "\1\2\11\uffff\1\0\1\1\37\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\15\2\14\2\15\1\14\22\15\1\14\1\15\1\11\4\15\1\12\7\15\1"+
-            "\13\12\10\7\15\7\7\1\1\22\7\3\15\1\6\1\7\1\15\4\7\1\2\1\5\24"+
-            "\7\1\3\1\15\1\4\uff82\15",
-            "\1\16",
-            "\1\20",
+            "\11\16\2\15\2\16\1\15\22\16\1\15\1\16\1\12\4\16\1\13\7\16\1"+
+            "\14\12\11\7\16\7\10\1\1\22\10\3\16\1\7\1\10\1\16\4\10\1\2\1"+
+            "\5\13\10\1\6\10\10\1\3\1\16\1\4\uff82\16",
+            "\1\17",
+            "\1\21",
             "",
             "",
-            "\1\23",
-            "\32\17\4\uffff\1\17\1\uffff\32\17",
+            "\1\24",
+            "\1\25",
+            "\32\20\4\uffff\1\20\1\uffff\32\20",
             "",
             "",
-            "\0\25",
-            "\0\25",
-            "\1\26\4\uffff\1\27",
-            "",
-            "",
-            "\1\31",
-            "",
-            "\1\32",
+            "\0\27",
+            "\0\27",
+            "\1\30\4\uffff\1\31",
             "",
             "",
             "\1\33",
             "",
-            "",
-            "",
-            "",
-            "",
             "\1\34",
+            "",
+            "",
             "\1\35",
             "\1\36",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\37",
             "\1\40",
             "\1\41",
-            "\12\17\7\uffff\32\17\4\uffff\1\17\1\uffff\32\17",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
             "\1\43",
-            "\12\17\7\uffff\32\17\4\uffff\1\17\1\uffff\32\17",
-            "",
+            "\1\44",
             "\1\45",
             "",
-            "\12\17\7\uffff\32\17\4\uffff\1\17\1\uffff\32\17",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
+            "\1\47",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
+            "",
+            "\1\51",
+            "",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
             ""
     };
 
@@ -847,13 +881,33 @@ public class InternalHelloScopingLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA12_10 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_10>='\u0000' && LA12_10<='\uFFFF')) ) {s = 23;}
+
+                        else s = 14;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_11 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_11>='\u0000' && LA12_11<='\uFFFF')) ) {s = 23;}
+
+                        else s = 14;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -867,41 +921,23 @@ public class InternalHelloScopingLexer extends Lexer {
 
                         else if ( (LA12_0=='f') ) {s = 5;}
 
-                        else if ( (LA12_0=='^') ) {s = 6;}
+                        else if ( (LA12_0=='r') ) {s = 6;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='G')||(LA12_0>='I' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='d')||(LA12_0>='g' && LA12_0<='z')) ) {s = 7;}
+                        else if ( (LA12_0=='^') ) {s = 7;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 8;}
+                        else if ( ((LA12_0>='A' && LA12_0<='G')||(LA12_0>='I' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='d')||(LA12_0>='g' && LA12_0<='q')||(LA12_0>='s' && LA12_0<='z')) ) {s = 8;}
 
-                        else if ( (LA12_0=='\"') ) {s = 9;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 9;}
 
-                        else if ( (LA12_0=='\'') ) {s = 10;}
+                        else if ( (LA12_0=='\"') ) {s = 10;}
 
-                        else if ( (LA12_0=='/') ) {s = 11;}
+                        else if ( (LA12_0=='\'') ) {s = 11;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 12;}
+                        else if ( (LA12_0=='/') ) {s = 12;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 13;}
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 13;}
 
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_9 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_9>='\u0000' && LA12_9<='\uFFFF')) ) {s = 21;}
-
-                        else s = 13;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA12_10 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_10>='\u0000' && LA12_10<='\uFFFF')) ) {s = 21;}
-
-                        else s = 13;
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 14;}
 
                         if ( s>=0 ) return s;
                         break;

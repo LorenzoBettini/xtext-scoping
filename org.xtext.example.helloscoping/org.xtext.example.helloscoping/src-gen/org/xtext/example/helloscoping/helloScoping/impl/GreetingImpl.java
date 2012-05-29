@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.helloscoping.helloScoping.Field;
+import org.xtext.example.helloscoping.helloScoping.FieldReference;
 import org.xtext.example.helloscoping.helloScoping.Greeting;
 import org.xtext.example.helloscoping.helloScoping.HelloScopingPackage;
 
@@ -36,6 +37,7 @@ import org.xtext.example.helloscoping.helloScoping.HelloScopingPackage;
  *   <li>{@link org.xtext.example.helloscoping.helloScoping.impl.GreetingImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.helloscoping.helloScoping.impl.GreetingImpl#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.xtext.example.helloscoping.helloScoping.impl.GreetingImpl#getFields <em>Fields</em>}</li>
+ *   <li>{@link org.xtext.example.helloscoping.helloScoping.impl.GreetingImpl#getReferences <em>References</em>}</li>
  * </ul>
  * </p>
  *
@@ -82,6 +84,16 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * @ordered
    */
   protected EList<Field> fields;
+
+  /**
+   * The cached value of the '{@link #getReferences() <em>References</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReferences()
+   * @generated
+   * @ordered
+   */
+  protected EList<FieldReference> references;
 
   /**
    * <!-- begin-user-doc -->
@@ -189,6 +201,20 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<FieldReference> getReferences()
+  {
+    if (references == null)
+    {
+      references = new EObjectContainmentEList<FieldReference>(FieldReference.class, this, HelloScopingPackage.GREETING__REFERENCES);
+    }
+    return references;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -196,6 +222,8 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     {
       case HelloScopingPackage.GREETING__FIELDS:
         return ((InternalEList<?>)getFields()).basicRemove(otherEnd, msgs);
+      case HelloScopingPackage.GREETING__REFERENCES:
+        return ((InternalEList<?>)getReferences()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -217,6 +245,8 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
         return basicGetSuperType();
       case HelloScopingPackage.GREETING__FIELDS:
         return getFields();
+      case HelloScopingPackage.GREETING__REFERENCES:
+        return getReferences();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -242,6 +272,10 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
         getFields().clear();
         getFields().addAll((Collection<? extends Field>)newValue);
         return;
+      case HelloScopingPackage.GREETING__REFERENCES:
+        getReferences().clear();
+        getReferences().addAll((Collection<? extends FieldReference>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -265,6 +299,9 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
       case HelloScopingPackage.GREETING__FIELDS:
         getFields().clear();
         return;
+      case HelloScopingPackage.GREETING__REFERENCES:
+        getReferences().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -285,6 +322,8 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
         return superType != null;
       case HelloScopingPackage.GREETING__FIELDS:
         return fields != null && !fields.isEmpty();
+      case HelloScopingPackage.GREETING__REFERENCES:
+        return references != null && !references.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -14,6 +14,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.example.helloscoping.helloScoping.Field;
+import org.xtext.example.helloscoping.helloScoping.FieldReference;
 import org.xtext.example.helloscoping.helloScoping.Greeting;
 import org.xtext.example.helloscoping.helloScoping.HelloScopingPackage;
 import org.xtext.example.helloscoping.helloScoping.Model;
@@ -30,6 +31,12 @@ public class HelloScopingSemanticSequencer extends AbstractDelegatingSemanticSeq
 			case HelloScopingPackage.FIELD:
 				if(context == grammarAccess.getFieldRule()) {
 					sequence_Field(context, (Field) semanticObject); 
+					return; 
+				}
+				else break;
+			case HelloScopingPackage.FIELD_REFERENCE:
+				if(context == grammarAccess.getFieldReferenceRule()) {
+					sequence_FieldReference(context, (FieldReference) semanticObject); 
 					return; 
 				}
 				else break;
@@ -51,6 +58,22 @@ public class HelloScopingSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Constraint:
+	 *     reference=[Field|ID]
+	 */
+	protected void sequence_FieldReference(EObject context, FieldReference semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, HelloScopingPackage.Literals.FIELD_REFERENCE__REFERENCE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HelloScopingPackage.Literals.FIELD_REFERENCE__REFERENCE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getFieldReferenceAccess().getReferenceFieldIDTerminalRuleCall_1_0_1(), semanticObject.getReference());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     name=ID
 	 */
 	protected void sequence_Field(EObject context, Field semanticObject) {
@@ -67,7 +90,7 @@ public class HelloScopingSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	/**
 	 * Constraint:
-	 *     (name=ID superType=[Greeting|ID]? fields+=Field*)
+	 *     (name=ID superType=[Greeting|ID]? fields+=Field* references+=FieldReference*)
 	 */
 	protected void sequence_Greeting(EObject context, Greeting semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

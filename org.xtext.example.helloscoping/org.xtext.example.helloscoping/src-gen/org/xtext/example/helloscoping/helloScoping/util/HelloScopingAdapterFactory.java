@@ -94,6 +94,11 @@ public class HelloScopingAdapterFactory extends AdapterFactoryImpl
         return createFieldAdapter();
       }
       @Override
+      public Adapter caseFieldReference(FieldReference object)
+      {
+        return createFieldReferenceAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -156,6 +161,21 @@ public class HelloScopingAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFieldAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.helloscoping.helloScoping.FieldReference <em>Field Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.helloscoping.helloScoping.FieldReference
+   * @generated
+   */
+  public Adapter createFieldReferenceAdapter()
   {
     return null;
   }

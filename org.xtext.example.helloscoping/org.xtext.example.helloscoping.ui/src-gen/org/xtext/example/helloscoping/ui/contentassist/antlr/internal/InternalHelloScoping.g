@@ -140,6 +140,34 @@ finally {
 
 
 
+// Entry rule entryRuleFieldReference
+entryRuleFieldReference 
+:
+{ before(grammarAccess.getFieldReferenceRule()); }
+	 ruleFieldReference
+{ after(grammarAccess.getFieldReferenceRule()); } 
+	 EOF 
+;
+
+// Rule FieldReference
+ruleFieldReference
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getFieldReferenceAccess().getGroup()); }
+(rule__FieldReference__Group__0)
+{ after(grammarAccess.getFieldReferenceAccess().getGroup()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 
 
 
@@ -298,6 +326,7 @@ rule__Greeting__Group__5
     }
 :
 	rule__Greeting__Group__5__Impl
+	rule__Greeting__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -309,17 +338,47 @@ rule__Greeting__Group__5__Impl
     }
 :
 (
-{ before(grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_5()); }
-
-	'}' 
-
-{ after(grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_5()); }
+{ before(grammarAccess.getGreetingAccess().getReferencesAssignment_5()); }
+(rule__Greeting__ReferencesAssignment_5)*
+{ after(grammarAccess.getGreetingAccess().getReferencesAssignment_5()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Greeting__Group__6
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Greeting__Group__6__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Greeting__Group__6__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_6()); }
+
+	'}' 
+
+{ after(grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_6()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -460,6 +519,69 @@ finally {
 
 
 
+rule__FieldReference__Group__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__FieldReference__Group__0__Impl
+	rule__FieldReference__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__FieldReference__Group__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getFieldReferenceAccess().getRefKeyword_0()); }
+
+	'ref' 
+
+{ after(grammarAccess.getFieldReferenceAccess().getRefKeyword_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__FieldReference__Group__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__FieldReference__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__FieldReference__Group__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getFieldReferenceAccess().getReferenceAssignment_1()); }
+(rule__FieldReference__ReferenceAssignment_1)
+{ after(grammarAccess.getFieldReferenceAccess().getReferenceAssignment_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
 
 rule__Model__GreetingsAssignment
     @init {
@@ -525,6 +647,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__Greeting__ReferencesAssignment_5
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getGreetingAccess().getReferencesFieldReferenceParserRuleCall_5_0()); }
+	ruleFieldReference{ after(grammarAccess.getGreetingAccess().getReferencesFieldReferenceParserRuleCall_5_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__Field__NameAssignment_1
     @init {
 		int stackSize = keepStackSize();
@@ -533,6 +670,25 @@ rule__Field__NameAssignment_1
 (
 { before(grammarAccess.getFieldAccess().getNameIDTerminalRuleCall_1_0()); }
 	RULE_ID{ after(grammarAccess.getFieldAccess().getNameIDTerminalRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__FieldReference__ReferenceAssignment_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getFieldReferenceAccess().getReferenceFieldCrossReference_1_0()); }
+(
+{ before(grammarAccess.getFieldReferenceAccess().getReferenceFieldIDTerminalRuleCall_1_0_1()); }
+	RULE_ID{ after(grammarAccess.getFieldReferenceAccess().getReferenceFieldIDTerminalRuleCall_1_0_1()); }
+)
+{ after(grammarAccess.getFieldReferenceAccess().getReferenceFieldCrossReference_1_0()); }
 )
 
 ;

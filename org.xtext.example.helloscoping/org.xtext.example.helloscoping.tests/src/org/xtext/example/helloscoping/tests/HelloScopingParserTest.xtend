@@ -35,10 +35,13 @@ class HelloScopingParserTest {
 		'''
 			Hello foo {
 				field foo
+				ref foo
 			}
 			Hello bar extends foo {
 				field bar
 				field foobar
+				ref bar
+				ref foobar
 			}
 		'''.parseAndAsserNoError
 	}

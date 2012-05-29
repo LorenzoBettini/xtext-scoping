@@ -126,13 +126,22 @@ public interface HelloScopingPackage extends EPackage
   int GREETING__FIELDS = 2;
 
   /**
+   * The feature id for the '<em><b>References</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GREETING__REFERENCES = 3;
+
+  /**
    * The number of structural features of the '<em>Greeting</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 3;
+  int GREETING_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.helloscoping.helloScoping.impl.FieldImpl <em>Field</em>}' class.
@@ -161,6 +170,34 @@ public interface HelloScopingPackage extends EPackage
    * @ordered
    */
   int FIELD_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.helloscoping.helloScoping.impl.FieldReferenceImpl <em>Field Reference</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.helloscoping.helloScoping.impl.FieldReferenceImpl
+   * @see org.xtext.example.helloscoping.helloScoping.impl.HelloScopingPackageImpl#getFieldReference()
+   * @generated
+   */
+  int FIELD_REFERENCE = 3;
+
+  /**
+   * The feature id for the '<em><b>Reference</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIELD_REFERENCE__REFERENCE = 0;
+
+  /**
+   * The number of structural features of the '<em>Field Reference</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIELD_REFERENCE_FEATURE_COUNT = 1;
 
 
   /**
@@ -228,6 +265,17 @@ public interface HelloScopingPackage extends EPackage
   EReference getGreeting_Fields();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.helloscoping.helloScoping.Greeting#getReferences <em>References</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>References</em>'.
+   * @see org.xtext.example.helloscoping.helloScoping.Greeting#getReferences()
+   * @see #getGreeting()
+   * @generated
+   */
+  EReference getGreeting_References();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.helloscoping.helloScoping.Field <em>Field</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -247,6 +295,27 @@ public interface HelloScopingPackage extends EPackage
    * @generated
    */
   EAttribute getField_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.helloscoping.helloScoping.FieldReference <em>Field Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Field Reference</em>'.
+   * @see org.xtext.example.helloscoping.helloScoping.FieldReference
+   * @generated
+   */
+  EClass getFieldReference();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.example.helloscoping.helloScoping.FieldReference#getReference <em>Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Reference</em>'.
+   * @see org.xtext.example.helloscoping.helloScoping.FieldReference#getReference()
+   * @see #getFieldReference()
+   * @generated
+   */
+  EReference getFieldReference_Reference();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -324,6 +393,14 @@ public interface HelloScopingPackage extends EPackage
     EReference GREETING__FIELDS = eINSTANCE.getGreeting_Fields();
 
     /**
+     * The meta object literal for the '<em><b>References</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GREETING__REFERENCES = eINSTANCE.getGreeting_References();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.helloscoping.helloScoping.impl.FieldImpl <em>Field</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -340,6 +417,24 @@ public interface HelloScopingPackage extends EPackage
      * @generated
      */
     EAttribute FIELD__NAME = eINSTANCE.getField_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.helloscoping.helloScoping.impl.FieldReferenceImpl <em>Field Reference</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.helloscoping.helloScoping.impl.FieldReferenceImpl
+     * @see org.xtext.example.helloscoping.helloScoping.impl.HelloScopingPackageImpl#getFieldReference()
+     * @generated
+     */
+    EClass FIELD_REFERENCE = eINSTANCE.getFieldReference();
+
+    /**
+     * The meta object literal for the '<em><b>Reference</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIELD_REFERENCE__REFERENCE = eINSTANCE.getFieldReference_Reference();
 
   }
 

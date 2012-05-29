@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.xtext.example.helloscoping.helloScoping.Field;
+import org.xtext.example.helloscoping.helloScoping.FieldReference;
 import org.xtext.example.helloscoping.helloScoping.Greeting;
 import org.xtext.example.helloscoping.helloScoping.HelloScopingFactory;
 import org.xtext.example.helloscoping.helloScoping.HelloScopingPackage;
@@ -47,6 +48,13 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
    * @generated
    */
   private EClass fieldEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fieldReferenceEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -176,6 +184,16 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getGreeting_References()
+  {
+    return (EReference)greetingEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getField()
   {
     return fieldEClass;
@@ -189,6 +207,26 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
   public EAttribute getField_Name()
   {
     return (EAttribute)fieldEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFieldReference()
+  {
+    return fieldReferenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFieldReference_Reference()
+  {
+    return (EReference)fieldReferenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -228,9 +266,13 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
     createEAttribute(greetingEClass, GREETING__NAME);
     createEReference(greetingEClass, GREETING__SUPER_TYPE);
     createEReference(greetingEClass, GREETING__FIELDS);
+    createEReference(greetingEClass, GREETING__REFERENCES);
 
     fieldEClass = createEClass(FIELD);
     createEAttribute(fieldEClass, FIELD__NAME);
+
+    fieldReferenceEClass = createEClass(FIELD_REFERENCE);
+    createEReference(fieldReferenceEClass, FIELD_REFERENCE__REFERENCE);
   }
 
   /**
@@ -271,9 +313,13 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
     initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGreeting_SuperType(), this.getGreeting(), null, "superType", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getGreeting_Fields(), this.getField(), null, "fields", null, 0, -1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGreeting_References(), this.getFieldReference(), null, "references", null, 0, -1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fieldEClass, Field.class, "Field", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getField_Name(), ecorePackage.getEString(), "name", null, 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fieldReferenceEClass, FieldReference.class, "FieldReference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFieldReference_Reference(), this.getField(), null, "reference", null, 0, 1, FieldReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

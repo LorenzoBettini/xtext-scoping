@@ -51,6 +51,9 @@ public class HelloScopingParserTest {
     _builder.append("\t");
     _builder.append("field foo");
     _builder.newLine();
+    _builder.append("\t");
+    _builder.append("ref foo");
+    _builder.newLine();
     _builder.append("}");
     _builder.newLine();
     _builder.append("Hello bar extends foo {");
@@ -60,6 +63,12 @@ public class HelloScopingParserTest {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("field foobar");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("ref bar");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("ref foobar");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();

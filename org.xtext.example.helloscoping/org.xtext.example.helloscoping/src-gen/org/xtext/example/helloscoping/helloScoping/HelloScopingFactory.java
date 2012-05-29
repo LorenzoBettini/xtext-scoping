@@ -54,6 +54,15 @@ public interface HelloScopingFactory extends EFactory
   Field createField();
 
   /**
+   * Returns a new object of class '<em>Field Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Field Reference</em>'.
+   * @generated
+   */
+  FieldReference createFieldReference();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

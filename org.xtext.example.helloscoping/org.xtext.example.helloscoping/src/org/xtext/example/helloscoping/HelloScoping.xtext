@@ -8,9 +8,14 @@ Model:
 Greeting:
 	'Hello' name=ID ('extends' superType=[Greeting])? '{'
 		(fields += Field)*
+		(references += FieldReference)*
 	'}'
 	;
 
 Field:
 	'field' name=ID
+;
+
+FieldReference:
+	'ref' reference=[Field]
 ;

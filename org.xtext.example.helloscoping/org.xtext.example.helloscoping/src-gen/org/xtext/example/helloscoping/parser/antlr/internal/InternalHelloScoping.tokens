@@ -1,5 +1,6 @@
 RULE_ID=4
 RULE_STRING=6
+T__16=16
 T__15=15
 T__12=12
 T__11=11
@@ -13,5 +14,6 @@ RULE_ML_COMMENT=7
 'Hello'=11
 'field'=15
 '}'=14
+'ref'=16
 'extends'=12
 '{'=13

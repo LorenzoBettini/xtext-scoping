@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.example.helloscoping.helloScoping.Greeting#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.helloscoping.helloScoping.Greeting#getSuperType <em>Super Type</em>}</li>
  *   <li>{@link org.xtext.example.helloscoping.helloScoping.Greeting#getFields <em>Fields</em>}</li>
+ *   <li>{@link org.xtext.example.helloscoping.helloScoping.Greeting#getReferences <em>References</em>}</li>
  * </ul>
  * </p>
  *
@@ -97,5 +98,21 @@ public interface Greeting extends EObject
    * @generated
    */
   EList<Field> getFields();
+
+  /**
+   * Returns the value of the '<em><b>References</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.helloscoping.helloScoping.FieldReference}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>References</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>References</em>' containment reference list.
+   * @see org.xtext.example.helloscoping.helloScoping.HelloScopingPackage#getGreeting_References()
+   * @model containment="true"
+   * @generated
+   */
+  EList<FieldReference> getReferences();
 
 } // Greeting

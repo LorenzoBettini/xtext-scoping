@@ -16,9 +16,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HelloScoping.ecore#//Greeting/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HelloScoping.ecore#//Greeting/superType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HelloScoping.ecore#//Greeting/fields"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HelloScoping.ecore#//Greeting/references"/>
     </genClasses>
     <genClasses ecoreClass="HelloScoping.ecore#//Field">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HelloScoping.ecore#//Field/name"/>
+    </genClasses>
+    <genClasses ecoreClass="HelloScoping.ecore#//FieldReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HelloScoping.ecore#//FieldReference/reference"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
