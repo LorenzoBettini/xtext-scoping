@@ -3,6 +3,9 @@
  */
 package org.xtext.example.helloscoping.scoping;
 
+import java.util.Collection;
+import java.util.LinkedList;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.xtext.scoping.IScope;
@@ -25,16 +28,18 @@ public class HelloScopingScopeProvider extends AbstractDeclarativeScopeProvider 
 		if (context instanceof FieldReference) {
 			FieldReference fieldReference = (FieldReference) context;
 			Greeting greeting = (Greeting) fieldReference.eContainer();
-			return getFields(greeting);
+			return getFields(greeting, new LinkedList<Greeting>());
 		}
 
 		return super.getScope(context, reference);
 	}
 
-	private IScope getFields(Greeting greeting) {
-		if (greeting == null)
+	private IScope getFields(Greeting greeting, Collection<Greeting> visited) {
+		// deal with possible cycle in the hierarchy
+		if (greeting == null || visited.contains(greeting))
 			return IScope.NULLSCOPE;
-		IScope parentScope = getFields(greeting.getSuperType());
+		visited.add(greeting);
+		IScope parentScope = getFields(greeting.getSuperType(), visited);
 		return Scopes.scopeFor(greeting.getFields(), parentScope);
 	}
 

@@ -57,10 +57,45 @@ class HelloScopingParserTest {
 			}
 		'''.parseAndAsserNoError
 	}
+
+	@Test
+	def void testCyclicHierarchy() {
+		'''
+			Hello foo extends foo3 {
+				field foo
+			}
+			Hello foo2 extends foo {
+				ref foo
+			}
+			Hello foo3 extends foo2 {
+				ref foo
+			}
+		'''.parseAndAsserNoError
+	}
+
+	@Test
+	def void testCorrectLinking() {
+		val model = '''
+			Hello base {
+				field foo
+			}
+			Hello derived1 extends base {
+				field foo
+			}
+			Hello derived2 extends derived1 {
+				ref foo
+			}
+		'''.parseAndAsserNoError
+		// foo in derived2 must refer to derived1.foo
+		// NOT base.foo
+		model.greetings.get(2).references.get(0).reference.
+			assertSame(model.greetings.get(1).fields.get(0))
+	}
 	
-	def void parseAndAsserNoError(CharSequence seq) {
+	def parseAndAsserNoError(CharSequence seq) {
 		val model = seq.parse
 		model.assertNotNull
 		model.assertNoErrors
+		model
 	}
 }
