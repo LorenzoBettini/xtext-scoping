@@ -1,0 +1,9 @@
+grammar org.xtext.example.helloscoping.HelloScoping with org.eclipse.xtext.common.Terminals
+
+generate helloScoping "http://www.xtext.org/example/helloscoping/HelloScoping"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
