@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.xtext.example.helloscoping.helloScoping.Field;
 import org.xtext.example.helloscoping.helloScoping.Greeting;
 import org.xtext.example.helloscoping.helloScoping.HelloScopingFactory;
 import org.xtext.example.helloscoping.helloScoping.HelloScopingPackage;
@@ -39,6 +40,13 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
    * @generated
    */
   private EClass greetingEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass fieldEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -148,6 +156,46 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getGreeting_SuperType()
+  {
+    return (EReference)greetingEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getGreeting_Fields()
+  {
+    return (EReference)greetingEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getField()
+  {
+    return fieldEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getField_Name()
+  {
+    return (EAttribute)fieldEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public HelloScopingFactory getHelloScopingFactory()
   {
     return (HelloScopingFactory)getEFactoryInstance();
@@ -178,6 +226,11 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
 
     greetingEClass = createEClass(GREETING);
     createEAttribute(greetingEClass, GREETING__NAME);
+    createEReference(greetingEClass, GREETING__SUPER_TYPE);
+    createEReference(greetingEClass, GREETING__FIELDS);
+
+    fieldEClass = createEClass(FIELD);
+    createEAttribute(fieldEClass, FIELD__NAME);
   }
 
   /**
@@ -216,6 +269,11 @@ public class HelloScopingPackageImpl extends EPackageImpl implements HelloScopin
 
     initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGreeting_SuperType(), this.getGreeting(), null, "superType", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getGreeting_Fields(), this.getField(), null, "fields", null, 0, -1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(fieldEClass, Field.class, "Field", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getField_Name(), ecorePackage.getEString(), "name", null, 0, 1, Field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

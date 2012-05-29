@@ -13,6 +13,7 @@ import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEOb
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.example.helloscoping.helloScoping.Field;
 import org.xtext.example.helloscoping.helloScoping.Greeting;
 import org.xtext.example.helloscoping.helloScoping.HelloScopingPackage;
 import org.xtext.example.helloscoping.helloScoping.Model;
@@ -26,6 +27,12 @@ public class HelloScopingSemanticSequencer extends AbstractDelegatingSemanticSeq
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == HelloScopingPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case HelloScopingPackage.FIELD:
+				if(context == grammarAccess.getFieldRule()) {
+					sequence_Field(context, (Field) semanticObject); 
+					return; 
+				}
+				else break;
 			case HelloScopingPackage.GREETING:
 				if(context == grammarAccess.getGreetingRule()) {
 					sequence_Greeting(context, (Greeting) semanticObject); 
@@ -46,15 +53,24 @@ public class HelloScopingSemanticSequencer extends AbstractDelegatingSemanticSeq
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_Greeting(EObject context, Greeting semanticObject) {
+	protected void sequence_Field(EObject context, Field semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, HelloScopingPackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HelloScopingPackage.Literals.GREETING__NAME));
+			if(transientValues.isValueTransient(semanticObject, HelloScopingPackage.Literals.FIELD__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HelloScopingPackage.Literals.FIELD__NAME));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFieldAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID superType=[Greeting|ID]? fields+=Field*)
+	 */
+	protected void sequence_Greeting(EObject context, Greeting semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

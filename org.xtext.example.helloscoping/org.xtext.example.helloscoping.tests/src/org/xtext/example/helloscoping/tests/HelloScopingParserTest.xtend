@@ -21,16 +21,25 @@ class HelloScopingParserTest {
 	@Test
 	def void testParsing() {
 		'''
-			Hello foo!
-			Hello bar!
-		'''.parse.assertNotNull
+			Hello foo {
+				field foo
+			}
+			Hello bar extends foo {
+				field bar
+			}
+		'''.parseAndAsserNoError
 	}
 	
 	@Test
 	def void testParsingAndLinking() {
 		'''
-			Hello foo!
-			Hello bar!
+			Hello foo {
+				field foo
+			}
+			Hello bar extends foo {
+				field bar
+				field foobar
+			}
 		'''.parseAndAsserNoError
 	}
 	

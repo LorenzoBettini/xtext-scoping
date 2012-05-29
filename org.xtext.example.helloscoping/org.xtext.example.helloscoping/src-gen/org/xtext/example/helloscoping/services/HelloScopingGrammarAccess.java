@@ -42,14 +42,22 @@ public class HelloScopingGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cHelloKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cExclamationMarkKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cSuperTypeGreetingCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
+		private final RuleCall cSuperTypeGreetingIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSuperTypeGreetingCrossReference_2_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cFieldsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cFieldsFieldParserRuleCall_4_0 = (RuleCall)cFieldsAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Greeting:
 		//
-		//	"Hello" name=ID "!";
+		//	"Hello" name=ID ("extends" superType=[Greeting])? "{" fields+=Field* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"Hello" name=ID "!"
+		//"Hello" name=ID ("extends" superType=[Greeting])? "{" fields+=Field* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"Hello"
@@ -61,13 +69,63 @@ public class HelloScopingGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
-		//"!"
-		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
+		//("extends" superType=[Greeting])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"extends"
+		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
+
+		//superType=[Greeting]
+		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
+
+		//[Greeting]
+		public CrossReference getSuperTypeGreetingCrossReference_2_1_0() { return cSuperTypeGreetingCrossReference_2_1_0; }
+
+		//ID
+		public RuleCall getSuperTypeGreetingIDTerminalRuleCall_2_1_0_1() { return cSuperTypeGreetingIDTerminalRuleCall_2_1_0_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+
+		//fields+=Field*
+		public Assignment getFieldsAssignment_4() { return cFieldsAssignment_4; }
+
+		//Field
+		public RuleCall getFieldsFieldParserRuleCall_4_0() { return cFieldsFieldParserRuleCall_4_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+
+	public class FieldElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Field");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFieldKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		
+		//Field:
+		//
+		//	"field" name=ID;
+		public ParserRule getRule() { return rule; }
+
+		//"field" name=ID
+		public Group getGroup() { return cGroup; }
+
+		//"field"
+		public Keyword getFieldKeyword_0() { return cFieldKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 	}
 	
 	
 	private ModelElements pModel;
 	private GreetingElements pGreeting;
+	private FieldElements pField;
 	
 	private final Grammar grammar;
 
@@ -120,13 +178,24 @@ public class HelloScopingGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Greeting:
 	//
-	//	"Hello" name=ID "!";
+	//	"Hello" name=ID ("extends" superType=[Greeting])? "{" fields+=Field* "}";
 	public GreetingElements getGreetingAccess() {
 		return (pGreeting != null) ? pGreeting : (pGreeting = new GreetingElements());
 	}
 	
 	public ParserRule getGreetingRule() {
 		return getGreetingAccess().getRule();
+	}
+
+	//Field:
+	//
+	//	"field" name=ID;
+	public FieldElements getFieldAccess() {
+		return (pField != null) ? pField : (pField = new FieldElements());
+	}
+	
+	public ParserRule getFieldRule() {
+		return getFieldAccess().getRule();
 	}
 
 	//terminal ID:

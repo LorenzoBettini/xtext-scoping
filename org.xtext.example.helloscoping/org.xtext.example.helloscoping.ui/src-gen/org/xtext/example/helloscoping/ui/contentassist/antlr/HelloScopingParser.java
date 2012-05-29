@@ -38,8 +38,13 @@ public class HelloScopingParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getGreetingAccess().getGroup(), "rule__Greeting__Group__0");
+					put(grammarAccess.getGreetingAccess().getGroup_2(), "rule__Greeting__Group_2__0");
+					put(grammarAccess.getFieldAccess().getGroup(), "rule__Field__Group__0");
 					put(grammarAccess.getModelAccess().getGreetingsAssignment(), "rule__Model__GreetingsAssignment");
 					put(grammarAccess.getGreetingAccess().getNameAssignment_1(), "rule__Greeting__NameAssignment_1");
+					put(grammarAccess.getGreetingAccess().getSuperTypeAssignment_2_1(), "rule__Greeting__SuperTypeAssignment_2_1");
+					put(grammarAccess.getGreetingAccess().getFieldsAssignment_4(), "rule__Greeting__FieldsAssignment_4");
+					put(grammarAccess.getFieldAccess().getNameAssignment_1(), "rule__Field__NameAssignment_1");
 				}
 			};
 		}

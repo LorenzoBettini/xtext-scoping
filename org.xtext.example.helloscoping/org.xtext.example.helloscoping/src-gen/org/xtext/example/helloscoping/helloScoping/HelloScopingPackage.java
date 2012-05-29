@@ -108,13 +108,59 @@ public interface HelloScopingPackage extends EPackage
   int GREETING__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GREETING__SUPER_TYPE = 1;
+
+  /**
+   * The feature id for the '<em><b>Fields</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GREETING__FIELDS = 2;
+
+  /**
    * The number of structural features of the '<em>Greeting</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 1;
+  int GREETING_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.helloscoping.helloScoping.impl.FieldImpl <em>Field</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.helloscoping.helloScoping.impl.FieldImpl
+   * @see org.xtext.example.helloscoping.helloScoping.impl.HelloScopingPackageImpl#getField()
+   * @generated
+   */
+  int FIELD = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIELD__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Field</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIELD_FEATURE_COUNT = 1;
 
 
   /**
@@ -158,6 +204,49 @@ public interface HelloScopingPackage extends EPackage
    * @generated
    */
   EAttribute getGreeting_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.example.helloscoping.helloScoping.Greeting#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @see org.xtext.example.helloscoping.helloScoping.Greeting#getSuperType()
+   * @see #getGreeting()
+   * @generated
+   */
+  EReference getGreeting_SuperType();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.helloscoping.helloScoping.Greeting#getFields <em>Fields</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Fields</em>'.
+   * @see org.xtext.example.helloscoping.helloScoping.Greeting#getFields()
+   * @see #getGreeting()
+   * @generated
+   */
+  EReference getGreeting_Fields();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.helloscoping.helloScoping.Field <em>Field</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Field</em>'.
+   * @see org.xtext.example.helloscoping.helloScoping.Field
+   * @generated
+   */
+  EClass getField();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.helloscoping.helloScoping.Field#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.helloscoping.helloScoping.Field#getName()
+   * @see #getField()
+   * @generated
+   */
+  EAttribute getField_Name();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -217,6 +306,40 @@ public interface HelloScopingPackage extends EPackage
      * @generated
      */
     EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GREETING__SUPER_TYPE = eINSTANCE.getGreeting_SuperType();
+
+    /**
+     * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GREETING__FIELDS = eINSTANCE.getGreeting_Fields();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.helloscoping.helloScoping.impl.FieldImpl <em>Field</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.helloscoping.helloScoping.impl.FieldImpl
+     * @see org.xtext.example.helloscoping.helloScoping.impl.HelloScopingPackageImpl#getField()
+     * @generated
+     */
+    EClass FIELD = eINSTANCE.getField();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FIELD__NAME = eINSTANCE.getField_Name();
 
   }
 

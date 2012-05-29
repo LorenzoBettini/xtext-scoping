@@ -25,25 +25,43 @@ public class HelloScopingParserTest {
   
   @Test
   public void testParsing() {
-    try {
-      StringConcatenation _builder = new StringConcatenation();
-      _builder.append("Hello foo!");
-      _builder.newLine();
-      _builder.append("Hello bar!");
-      _builder.newLine();
-      Model _parse = this._parseHelper.parse(_builder);
-      Assert.assertNotNull(_parse);
-    } catch (Exception _e) {
-      throw Exceptions.sneakyThrow(_e);
-    }
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("Hello foo {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("field foo");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("Hello bar extends foo {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("field bar");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    this.parseAndAsserNoError(_builder);
   }
   
   @Test
   public void testParsingAndLinking() {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("Hello foo!");
+    _builder.append("Hello foo {");
     _builder.newLine();
-    _builder.append("Hello bar!");
+    _builder.append("\t");
+    _builder.append("field foo");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("Hello bar extends foo {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("field bar");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("field foobar");
+    _builder.newLine();
+    _builder.append("}");
     _builder.newLine();
     this.parseAndAsserNoError(_builder);
   }

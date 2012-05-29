@@ -6,4 +6,11 @@ Model:
 	greetings+=Greeting*;
 	
 Greeting:
-	'Hello' name=ID '!';
+	'Hello' name=ID ('extends' superType=[Greeting])? '{'
+		(fields += Field)*
+	'}'
+	;
+
+Field:
+	'field' name=ID
+;

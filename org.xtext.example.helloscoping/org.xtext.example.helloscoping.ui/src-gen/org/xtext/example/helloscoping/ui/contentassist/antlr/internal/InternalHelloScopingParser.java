@@ -22,12 +22,15 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalHelloScopingParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'{'", "'}'", "'extends'", "'field'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=6;
+    public static final int T__15=15;
     public static final int T__12=12;
     public static final int T__11=11;
+    public static final int T__14=14;
+    public static final int T__13=13;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_INT=5;
     public static final int RULE_WS=9;
@@ -244,22 +247,99 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
     // $ANTLR end "ruleGreeting"
 
 
+    // $ANTLR start "entryRuleField"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:116:1: entryRuleField : ruleField EOF ;
+    public final void entryRuleField() throws RecognitionException {
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:117:1: ( ruleField EOF )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:118:1: ruleField EOF
+            {
+             before(grammarAccess.getFieldRule()); 
+            pushFollow(FOLLOW_ruleField_in_entryRuleField182);
+            ruleField();
+
+            state._fsp--;
+
+             after(grammarAccess.getFieldRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleField189); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleField"
+
+
+    // $ANTLR start "ruleField"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:125:1: ruleField : ( ( rule__Field__Group__0 ) ) ;
+    public final void ruleField() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:129:2: ( ( ( rule__Field__Group__0 ) ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:130:1: ( ( rule__Field__Group__0 ) )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:130:1: ( ( rule__Field__Group__0 ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:131:1: ( rule__Field__Group__0 )
+            {
+             before(grammarAccess.getFieldAccess().getGroup()); 
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:132:1: ( rule__Field__Group__0 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:132:2: rule__Field__Group__0
+            {
+            pushFollow(FOLLOW_rule__Field__Group__0_in_ruleField215);
+            rule__Field__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFieldAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleField"
+
+
     // $ANTLR start "rule__Greeting__Group__0"
-    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:118:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:146:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
     public final void rule__Greeting__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:122:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:123:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:150:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:151:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0189);
+            pushFollow(FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0249);
             rule__Greeting__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0192);
+            pushFollow(FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0252);
             rule__Greeting__Group__1();
 
             state._fsp--;
@@ -283,20 +363,20 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Greeting__Group__0__Impl"
-    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:130:1: rule__Greeting__Group__0__Impl : ( 'Hello' ) ;
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:158:1: rule__Greeting__Group__0__Impl : ( 'Hello' ) ;
     public final void rule__Greeting__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:134:1: ( ( 'Hello' ) )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:135:1: ( 'Hello' )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:162:1: ( ( 'Hello' ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:163:1: ( 'Hello' )
             {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:135:1: ( 'Hello' )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:136:1: 'Hello'
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:163:1: ( 'Hello' )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:164:1: 'Hello'
             {
              before(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__Greeting__Group__0__Impl220); 
+            match(input,11,FOLLOW_11_in_rule__Greeting__Group__0__Impl280); 
              after(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
 
             }
@@ -320,21 +400,21 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Greeting__Group__1"
-    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:149:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:177:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
     public final void rule__Greeting__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:153:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:154:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:181:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:182:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1251);
+            pushFollow(FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1311);
             rule__Greeting__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1254);
+            pushFollow(FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1314);
             rule__Greeting__Group__2();
 
             state._fsp--;
@@ -358,23 +438,23 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Greeting__Group__1__Impl"
-    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:161:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__NameAssignment_1 ) ) ;
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:189:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__NameAssignment_1 ) ) ;
     public final void rule__Greeting__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:165:1: ( ( ( rule__Greeting__NameAssignment_1 ) ) )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:166:1: ( ( rule__Greeting__NameAssignment_1 ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:193:1: ( ( ( rule__Greeting__NameAssignment_1 ) ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:194:1: ( ( rule__Greeting__NameAssignment_1 ) )
             {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:166:1: ( ( rule__Greeting__NameAssignment_1 ) )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:167:1: ( rule__Greeting__NameAssignment_1 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:194:1: ( ( rule__Greeting__NameAssignment_1 ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:195:1: ( rule__Greeting__NameAssignment_1 )
             {
              before(grammarAccess.getGreetingAccess().getNameAssignment_1()); 
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:168:1: ( rule__Greeting__NameAssignment_1 )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:168:2: rule__Greeting__NameAssignment_1
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:196:1: ( rule__Greeting__NameAssignment_1 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:196:2: rule__Greeting__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl281);
+            pushFollow(FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl341);
             rule__Greeting__NameAssignment_1();
 
             state._fsp--;
@@ -405,17 +485,22 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Greeting__Group__2"
-    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:178:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl ;
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:206:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl rule__Greeting__Group__3 ;
     public final void rule__Greeting__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:182:1: ( rule__Greeting__Group__2__Impl )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:183:2: rule__Greeting__Group__2__Impl
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:210:1: ( rule__Greeting__Group__2__Impl rule__Greeting__Group__3 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:211:2: rule__Greeting__Group__2__Impl rule__Greeting__Group__3
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2311);
+            pushFollow(FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2371);
             rule__Greeting__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Greeting__Group__3_in_rule__Greeting__Group__2374);
+            rule__Greeting__Group__3();
 
             state._fsp--;
 
@@ -438,21 +523,42 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Greeting__Group__2__Impl"
-    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:189:1: rule__Greeting__Group__2__Impl : ( '!' ) ;
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:218:1: rule__Greeting__Group__2__Impl : ( ( rule__Greeting__Group_2__0 )? ) ;
     public final void rule__Greeting__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:193:1: ( ( '!' ) )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:194:1: ( '!' )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:222:1: ( ( ( rule__Greeting__Group_2__0 )? ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:223:1: ( ( rule__Greeting__Group_2__0 )? )
             {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:194:1: ( '!' )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:195:1: '!'
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:223:1: ( ( rule__Greeting__Group_2__0 )? )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:224:1: ( rule__Greeting__Group_2__0 )?
             {
-             before(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
-            match(input,12,FOLLOW_12_in_rule__Greeting__Group__2__Impl339); 
-             after(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
+             before(grammarAccess.getGreetingAccess().getGroup_2()); 
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:225:1: ( rule__Greeting__Group_2__0 )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0==14) ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:225:2: rule__Greeting__Group_2__0
+                    {
+                    pushFollow(FOLLOW_rule__Greeting__Group_2__0_in_rule__Greeting__Group__2__Impl401);
+                    rule__Greeting__Group_2__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getGreetingAccess().getGroup_2()); 
 
             }
 
@@ -474,21 +580,579 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
     // $ANTLR end "rule__Greeting__Group__2__Impl"
 
 
+    // $ANTLR start "rule__Greeting__Group__3"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:235:1: rule__Greeting__Group__3 : rule__Greeting__Group__3__Impl rule__Greeting__Group__4 ;
+    public final void rule__Greeting__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:239:1: ( rule__Greeting__Group__3__Impl rule__Greeting__Group__4 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:240:2: rule__Greeting__Group__3__Impl rule__Greeting__Group__4
+            {
+            pushFollow(FOLLOW_rule__Greeting__Group__3__Impl_in_rule__Greeting__Group__3432);
+            rule__Greeting__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Greeting__Group__4_in_rule__Greeting__Group__3435);
+            rule__Greeting__Group__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group__3"
+
+
+    // $ANTLR start "rule__Greeting__Group__3__Impl"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:247:1: rule__Greeting__Group__3__Impl : ( '{' ) ;
+    public final void rule__Greeting__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:251:1: ( ( '{' ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:252:1: ( '{' )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:252:1: ( '{' )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:253:1: '{'
+            {
+             before(grammarAccess.getGreetingAccess().getLeftCurlyBracketKeyword_3()); 
+            match(input,12,FOLLOW_12_in_rule__Greeting__Group__3__Impl463); 
+             after(grammarAccess.getGreetingAccess().getLeftCurlyBracketKeyword_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group__3__Impl"
+
+
+    // $ANTLR start "rule__Greeting__Group__4"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:266:1: rule__Greeting__Group__4 : rule__Greeting__Group__4__Impl rule__Greeting__Group__5 ;
+    public final void rule__Greeting__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:270:1: ( rule__Greeting__Group__4__Impl rule__Greeting__Group__5 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:271:2: rule__Greeting__Group__4__Impl rule__Greeting__Group__5
+            {
+            pushFollow(FOLLOW_rule__Greeting__Group__4__Impl_in_rule__Greeting__Group__4494);
+            rule__Greeting__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Greeting__Group__5_in_rule__Greeting__Group__4497);
+            rule__Greeting__Group__5();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group__4"
+
+
+    // $ANTLR start "rule__Greeting__Group__4__Impl"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:278:1: rule__Greeting__Group__4__Impl : ( ( rule__Greeting__FieldsAssignment_4 )* ) ;
+    public final void rule__Greeting__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:282:1: ( ( ( rule__Greeting__FieldsAssignment_4 )* ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:283:1: ( ( rule__Greeting__FieldsAssignment_4 )* )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:283:1: ( ( rule__Greeting__FieldsAssignment_4 )* )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:284:1: ( rule__Greeting__FieldsAssignment_4 )*
+            {
+             before(grammarAccess.getGreetingAccess().getFieldsAssignment_4()); 
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:285:1: ( rule__Greeting__FieldsAssignment_4 )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( (LA3_0==15) ) {
+                    alt3=1;
+                }
+
+
+                switch (alt3) {
+            	case 1 :
+            	    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:285:2: rule__Greeting__FieldsAssignment_4
+            	    {
+            	    pushFollow(FOLLOW_rule__Greeting__FieldsAssignment_4_in_rule__Greeting__Group__4__Impl524);
+            	    rule__Greeting__FieldsAssignment_4();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop3;
+                }
+            } while (true);
+
+             after(grammarAccess.getGreetingAccess().getFieldsAssignment_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group__4__Impl"
+
+
+    // $ANTLR start "rule__Greeting__Group__5"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:295:1: rule__Greeting__Group__5 : rule__Greeting__Group__5__Impl ;
+    public final void rule__Greeting__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:299:1: ( rule__Greeting__Group__5__Impl )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:300:2: rule__Greeting__Group__5__Impl
+            {
+            pushFollow(FOLLOW_rule__Greeting__Group__5__Impl_in_rule__Greeting__Group__5555);
+            rule__Greeting__Group__5__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group__5"
+
+
+    // $ANTLR start "rule__Greeting__Group__5__Impl"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:306:1: rule__Greeting__Group__5__Impl : ( '}' ) ;
+    public final void rule__Greeting__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:310:1: ( ( '}' ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:311:1: ( '}' )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:311:1: ( '}' )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:312:1: '}'
+            {
+             before(grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_5()); 
+            match(input,13,FOLLOW_13_in_rule__Greeting__Group__5__Impl583); 
+             after(grammarAccess.getGreetingAccess().getRightCurlyBracketKeyword_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group__5__Impl"
+
+
+    // $ANTLR start "rule__Greeting__Group_2__0"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:337:1: rule__Greeting__Group_2__0 : rule__Greeting__Group_2__0__Impl rule__Greeting__Group_2__1 ;
+    public final void rule__Greeting__Group_2__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:341:1: ( rule__Greeting__Group_2__0__Impl rule__Greeting__Group_2__1 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:342:2: rule__Greeting__Group_2__0__Impl rule__Greeting__Group_2__1
+            {
+            pushFollow(FOLLOW_rule__Greeting__Group_2__0__Impl_in_rule__Greeting__Group_2__0626);
+            rule__Greeting__Group_2__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Greeting__Group_2__1_in_rule__Greeting__Group_2__0629);
+            rule__Greeting__Group_2__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group_2__0"
+
+
+    // $ANTLR start "rule__Greeting__Group_2__0__Impl"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:349:1: rule__Greeting__Group_2__0__Impl : ( 'extends' ) ;
+    public final void rule__Greeting__Group_2__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:353:1: ( ( 'extends' ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:354:1: ( 'extends' )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:354:1: ( 'extends' )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:355:1: 'extends'
+            {
+             before(grammarAccess.getGreetingAccess().getExtendsKeyword_2_0()); 
+            match(input,14,FOLLOW_14_in_rule__Greeting__Group_2__0__Impl657); 
+             after(grammarAccess.getGreetingAccess().getExtendsKeyword_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group_2__0__Impl"
+
+
+    // $ANTLR start "rule__Greeting__Group_2__1"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:368:1: rule__Greeting__Group_2__1 : rule__Greeting__Group_2__1__Impl ;
+    public final void rule__Greeting__Group_2__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:372:1: ( rule__Greeting__Group_2__1__Impl )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:373:2: rule__Greeting__Group_2__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Greeting__Group_2__1__Impl_in_rule__Greeting__Group_2__1688);
+            rule__Greeting__Group_2__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group_2__1"
+
+
+    // $ANTLR start "rule__Greeting__Group_2__1__Impl"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:379:1: rule__Greeting__Group_2__1__Impl : ( ( rule__Greeting__SuperTypeAssignment_2_1 ) ) ;
+    public final void rule__Greeting__Group_2__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:383:1: ( ( ( rule__Greeting__SuperTypeAssignment_2_1 ) ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:384:1: ( ( rule__Greeting__SuperTypeAssignment_2_1 ) )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:384:1: ( ( rule__Greeting__SuperTypeAssignment_2_1 ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:385:1: ( rule__Greeting__SuperTypeAssignment_2_1 )
+            {
+             before(grammarAccess.getGreetingAccess().getSuperTypeAssignment_2_1()); 
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:386:1: ( rule__Greeting__SuperTypeAssignment_2_1 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:386:2: rule__Greeting__SuperTypeAssignment_2_1
+            {
+            pushFollow(FOLLOW_rule__Greeting__SuperTypeAssignment_2_1_in_rule__Greeting__Group_2__1__Impl715);
+            rule__Greeting__SuperTypeAssignment_2_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getGreetingAccess().getSuperTypeAssignment_2_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__Group_2__1__Impl"
+
+
+    // $ANTLR start "rule__Field__Group__0"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:400:1: rule__Field__Group__0 : rule__Field__Group__0__Impl rule__Field__Group__1 ;
+    public final void rule__Field__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:404:1: ( rule__Field__Group__0__Impl rule__Field__Group__1 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:405:2: rule__Field__Group__0__Impl rule__Field__Group__1
+            {
+            pushFollow(FOLLOW_rule__Field__Group__0__Impl_in_rule__Field__Group__0749);
+            rule__Field__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Field__Group__1_in_rule__Field__Group__0752);
+            rule__Field__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Field__Group__0"
+
+
+    // $ANTLR start "rule__Field__Group__0__Impl"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:412:1: rule__Field__Group__0__Impl : ( 'field' ) ;
+    public final void rule__Field__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:416:1: ( ( 'field' ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:417:1: ( 'field' )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:417:1: ( 'field' )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:418:1: 'field'
+            {
+             before(grammarAccess.getFieldAccess().getFieldKeyword_0()); 
+            match(input,15,FOLLOW_15_in_rule__Field__Group__0__Impl780); 
+             after(grammarAccess.getFieldAccess().getFieldKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Field__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Field__Group__1"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:431:1: rule__Field__Group__1 : rule__Field__Group__1__Impl ;
+    public final void rule__Field__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:435:1: ( rule__Field__Group__1__Impl )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:436:2: rule__Field__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Field__Group__1__Impl_in_rule__Field__Group__1811);
+            rule__Field__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Field__Group__1"
+
+
+    // $ANTLR start "rule__Field__Group__1__Impl"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:442:1: rule__Field__Group__1__Impl : ( ( rule__Field__NameAssignment_1 ) ) ;
+    public final void rule__Field__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:446:1: ( ( ( rule__Field__NameAssignment_1 ) ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:447:1: ( ( rule__Field__NameAssignment_1 ) )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:447:1: ( ( rule__Field__NameAssignment_1 ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:448:1: ( rule__Field__NameAssignment_1 )
+            {
+             before(grammarAccess.getFieldAccess().getNameAssignment_1()); 
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:449:1: ( rule__Field__NameAssignment_1 )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:449:2: rule__Field__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__Field__NameAssignment_1_in_rule__Field__Group__1__Impl838);
+            rule__Field__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFieldAccess().getNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Field__Group__1__Impl"
+
+
     // $ANTLR start "rule__Model__GreetingsAssignment"
-    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:215:1: rule__Model__GreetingsAssignment : ( ruleGreeting ) ;
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:464:1: rule__Model__GreetingsAssignment : ( ruleGreeting ) ;
     public final void rule__Model__GreetingsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:219:1: ( ( ruleGreeting ) )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:220:1: ( ruleGreeting )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:468:1: ( ( ruleGreeting ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:469:1: ( ruleGreeting )
             {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:220:1: ( ruleGreeting )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:221:1: ruleGreeting
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:469:1: ( ruleGreeting )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:470:1: ruleGreeting
             {
              before(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment381);
+            pushFollow(FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment877);
             ruleGreeting();
 
             state._fsp--;
@@ -516,20 +1180,20 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
 
 
     // $ANTLR start "rule__Greeting__NameAssignment_1"
-    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:230:1: rule__Greeting__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:479:1: rule__Greeting__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Greeting__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:234:1: ( ( RULE_ID ) )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:235:1: ( RULE_ID )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:483:1: ( ( RULE_ID ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:484:1: ( RULE_ID )
             {
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:235:1: ( RULE_ID )
-            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:236:1: RULE_ID
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:484:1: ( RULE_ID )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:485:1: RULE_ID
             {
              before(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1412); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1908); 
              after(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -551,6 +1215,129 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
     }
     // $ANTLR end "rule__Greeting__NameAssignment_1"
 
+
+    // $ANTLR start "rule__Greeting__SuperTypeAssignment_2_1"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:494:1: rule__Greeting__SuperTypeAssignment_2_1 : ( ( RULE_ID ) ) ;
+    public final void rule__Greeting__SuperTypeAssignment_2_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:498:1: ( ( ( RULE_ID ) ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:499:1: ( ( RULE_ID ) )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:499:1: ( ( RULE_ID ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:500:1: ( RULE_ID )
+            {
+             before(grammarAccess.getGreetingAccess().getSuperTypeGreetingCrossReference_2_1_0()); 
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:501:1: ( RULE_ID )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:502:1: RULE_ID
+            {
+             before(grammarAccess.getGreetingAccess().getSuperTypeGreetingIDTerminalRuleCall_2_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Greeting__SuperTypeAssignment_2_1943); 
+             after(grammarAccess.getGreetingAccess().getSuperTypeGreetingIDTerminalRuleCall_2_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getGreetingAccess().getSuperTypeGreetingCrossReference_2_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__SuperTypeAssignment_2_1"
+
+
+    // $ANTLR start "rule__Greeting__FieldsAssignment_4"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:513:1: rule__Greeting__FieldsAssignment_4 : ( ruleField ) ;
+    public final void rule__Greeting__FieldsAssignment_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:517:1: ( ( ruleField ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:518:1: ( ruleField )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:518:1: ( ruleField )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:519:1: ruleField
+            {
+             before(grammarAccess.getGreetingAccess().getFieldsFieldParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_ruleField_in_rule__Greeting__FieldsAssignment_4978);
+            ruleField();
+
+            state._fsp--;
+
+             after(grammarAccess.getGreetingAccess().getFieldsFieldParserRuleCall_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Greeting__FieldsAssignment_4"
+
+
+    // $ANTLR start "rule__Field__NameAssignment_1"
+    // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:528:1: rule__Field__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Field__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:532:1: ( ( RULE_ID ) )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:533:1: ( RULE_ID )
+            {
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:533:1: ( RULE_ID )
+            // ../org.xtext.example.helloscoping.ui/src-gen/org/xtext/example/helloscoping/ui/contentassist/antlr/internal/InternalHelloScoping.g:534:1: RULE_ID
+            {
+             before(grammarAccess.getFieldAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Field__NameAssignment_11009); 
+             after(grammarAccess.getFieldAccess().getNameIDTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Field__NameAssignment_1"
+
     // Delegated rules
 
 
@@ -562,15 +1349,40 @@ public class InternalHelloScopingParser extends AbstractInternalContentAssistPar
     public static final BitSet FOLLOW_ruleGreeting_in_entryRuleGreeting122 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGreeting129 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Greeting__Group__0_in_ruleGreeting155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0189 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Greeting__Group__0__Impl220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1251 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Greeting__Group__2__Impl339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleField_in_entryRuleField182 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleField189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Field__Group__0_in_ruleField215 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0249 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Greeting__Group__0__Impl280 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1311 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1314 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2371 = new BitSet(new long[]{0x0000000000005000L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__3_in_rule__Greeting__Group__2374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group_2__0_in_rule__Greeting__Group__2__Impl401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__3__Impl_in_rule__Greeting__Group__3432 = new BitSet(new long[]{0x000000000000A000L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__4_in_rule__Greeting__Group__3435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Greeting__Group__3__Impl463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__4__Impl_in_rule__Greeting__Group__4494 = new BitSet(new long[]{0x000000000000A000L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__5_in_rule__Greeting__Group__4497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__FieldsAssignment_4_in_rule__Greeting__Group__4__Impl524 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__5__Impl_in_rule__Greeting__Group__5555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Greeting__Group__5__Impl583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group_2__0__Impl_in_rule__Greeting__Group_2__0626 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Greeting__Group_2__1_in_rule__Greeting__Group_2__0629 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Greeting__Group_2__0__Impl657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group_2__1__Impl_in_rule__Greeting__Group_2__1688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__SuperTypeAssignment_2_1_in_rule__Greeting__Group_2__1__Impl715 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Field__Group__0__Impl_in_rule__Field__Group__0749 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Field__Group__1_in_rule__Field__Group__0752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Field__Group__0__Impl780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Field__Group__1__Impl_in_rule__Field__Group__1811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Field__NameAssignment_1_in_rule__Field__Group__1__Impl838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment877 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Greeting__SuperTypeAssignment_2_1943 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleField_in_rule__Greeting__FieldsAssignment_4978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Field__NameAssignment_11009 = new BitSet(new long[]{0x0000000000000002L});
 
 }
