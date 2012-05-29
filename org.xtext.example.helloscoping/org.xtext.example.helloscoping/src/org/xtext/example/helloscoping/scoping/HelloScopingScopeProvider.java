@@ -14,9 +14,9 @@ import org.xtext.example.helloscoping.helloScoping.Greeting;
 /**
  * This class contains custom scoping description.
  * 
- * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#scoping
- * on how and when to use it 
- *
+ * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#scoping on
+ * how and when to use it
+ * 
  */
 public class HelloScopingScopeProvider extends AbstractDeclarativeScopeProvider {
 
@@ -32,10 +32,9 @@ public class HelloScopingScopeProvider extends AbstractDeclarativeScopeProvider 
 	}
 
 	private IScope getFields(Greeting greeting) {
-		IScope parentScope = IScope.NULLSCOPE;
-		if (greeting.getSuperType() != null) {
-			parentScope = getFields(greeting.getSuperType());
-		}
+		if (greeting == null)
+			return IScope.NULLSCOPE;
+		IScope parentScope = getFields(greeting.getSuperType());
 		return Scopes.scopeFor(greeting.getFields(), parentScope);
 	}
 
